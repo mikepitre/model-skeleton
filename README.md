@@ -85,5 +85,5 @@
 
 9)  Simulate buying an item by inserting a User for yourself and an Order for that User.
 
-    User.create(first_name: "Mike"m last_name: "Pitre", email: "michaelepitre@gmail.com")
+    User.create(first_name: "Mike", last_name: "Pitre", email: "michaelepitre@gmail.com")
     Order.create(item_id: 30, quantity: 2)
