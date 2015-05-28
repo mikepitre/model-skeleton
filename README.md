@@ -60,7 +60,9 @@
 
 5)  Correct Virginie Mitchell’s address to “New York, NY, 10108”.
 
-    Address.update(41, city: "New York", state: "NY", zip: 10108)
+    Address.update(41, city: "New York", zip: 10108)
+
+    Address.where(user_id: 39).update_all(city: "New York", zip :10108)
 
 
 
@@ -78,6 +80,10 @@
 
 8)  How much was spent on books?
 
-
+    book_orders = Item.joins("JOIN orders ON orders.item_id = items.id").where(category:"Books")
+    book_orders.sum("price * quantity")
 
 9)  Simulate buying an item by inserting a User for yourself and an Order for that User.
+
+    User.create(first_name: "Mike"m last_name: "Pitre", email: "michaelepitre@gmail.com")
+    Order.create(item_id: 30, quantity: 2)
