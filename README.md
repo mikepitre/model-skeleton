@@ -60,6 +60,8 @@
 
 5)  Correct Virginie Mitchell’s address to “New York, NY, 10108”.
 
+    Address.update(41, city: "New York", state: "NY", zip: 10108)
+
 
 
 6)  How much would it cost to buy one of each tool?
